@@ -8,7 +8,10 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    sourcemaps = require('gulp-sourcemaps'),
+    plumber = require('gulp-plumber')
+    babel = require('gulp-babel');
 
 // handles gulp errors
 function handleErrors (error){
@@ -51,19 +54,29 @@ gulp.task('styles:vendor:reload', function () {
 gulp.task('scripts', function () {
     console.log('starting scripts!');
     gulp.src('public/js/**/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
-        .pipe(jshint.reporter('fail'))
-        .on('error', function () {
+        .pipe(plumber(function (err) {
+            console.log('Scripts Task Error');
+            console.log(err);
             this.emit('end');
-        })
-        .pipe(concat('scripts.min.js'))
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        // .pipe(jshint())
+        // .pipe(jshint.reporter(stylish))
+        // .pipe(jshint.reporter('fail'))
+        // .on('error', function () {
+        //     this.emit('end');
+        // })
         .pipe(uglify())
+        .pipe(concat('scripts.min.js'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/build/js/'));
 });
 // reload script
 gulp.task('scripts:reload', function () {
-    gulp.src('public/js/main.js').pipe(livereload({auto:false}));
+    gulp.src('public/js/**/*.js').pipe(livereload({auto:false}));
 });
 // watches files
 gulp.task('watch', function () {
