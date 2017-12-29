@@ -10,8 +10,17 @@ var gulp = require('gulp'),
     stylish = require('jshint-stylish'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
-    plumber = require('gulp-plumber')
-    babel = require('gulp-babel');
+    plumber = require('gulp-plumber'),
+    babel = require('gulp-babel'),
+    // Handlebars plugins
+    handlebars = require('gulp-handlebars'),
+    handlebarsLib = require('handlebars'),
+    declare = require('gulp-declare'),
+    wrap = require('gulp-wrap');
+
+// File paths
+var DIST_PATH = 'public/build/js/';
+var TEMPLATES_PATH = 'templates/**/*.hbs';
 
 // handles gulp errors
 function handleErrors (error){
@@ -78,6 +87,27 @@ gulp.task('scripts', function () {
 gulp.task('scripts:reload', function () {
     gulp.src('public/js/**/*.js').pipe(livereload({auto:false}));
 });
+
+// Images
+gulp.task('images', function () {
+   console.log('starting images task');
+});
+
+gulp.task('templates', function () {
+    return gulp.src(TEMPLATES_PATH)
+        .pipe(handlebars({
+            handlebars: handlebarsLib
+        }))
+        .pipe(wrap('Handlebars.template(<%= contents %>)'))
+        .pipe(declare({
+            namespace: 'templates',
+            noRedeclare: true
+        }))
+        .pipe(concat('templates.js'))
+        .pipe(gulp.dest(DIST_PATH))
+        .pipe(livereload());
+});
+
 // watches files
 gulp.task('watch', function () {
     livereload.listen();
@@ -89,6 +119,8 @@ gulp.task('watch', function () {
     gulp.watch('public/css/**/*.scss', ['styles', 'styles:reload']);
 
     gulp.watch('public/vendor/css/**/*.css', ['styles:vendor', 'styles:vendor:reload']);
+
+    gulp.watch(TEMPLATES_PATH, ['templates']);
 });
 
 // runs all gulp tasks

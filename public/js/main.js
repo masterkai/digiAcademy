@@ -11,7 +11,11 @@ class Person {
     }
 }
 
-let person = new Person('Neo');
+let person = new Person('NeoLiuKai');
 // var name = 'Jen Smith';
 
-console.log(person.hello());
+var greetHTML = templates['greeting']({
+    message: person.hello()
+});
+// console.log();
+document.write(greetHTML);
