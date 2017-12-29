@@ -16,11 +16,19 @@ var gulp = require('gulp'),
     handlebars = require('gulp-handlebars'),
     handlebarsLib = require('handlebars'),
     declare = require('gulp-declare'),
-    wrap = require('gulp-wrap');
+    wrap = require('gulp-wrap'),
+    // Image compression
+    imagemin = require('gulp-imagemin'),
+    imageminPngquant = require('imagemin-pngquant'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress'),
+    del = require('del'),
+    zip = require('gulp-zip');
 
 // File paths
 var DIST_PATH = 'public/build/js/';
 var TEMPLATES_PATH = 'templates/**/*.hbs';
+var IMG_PATH = 'public/img/**/*.{png,jpeg,jpg,svg,gif}';
+var IMAGES_PATH = 'public/build/images/';
 
 // handles gulp errors
 function handleErrors (error){
@@ -90,7 +98,18 @@ gulp.task('scripts:reload', function () {
 
 // Images
 gulp.task('images', function () {
-   console.log('starting images task');
+    return gulp.src(IMG_PATH)
+        .pipe(imagemin(
+            [
+                imagemin.gifsicle(),
+                imagemin.jpegtran(),
+                imagemin.optipng(),
+                imagemin.svgo(),
+                imageminPngquant(),
+                imageminJpegRecompress()
+            ]
+        ))
+        .pipe(gulp.dest(IMAGES_PATH));
 });
 
 gulp.task('templates', function () {
@@ -123,7 +142,13 @@ gulp.task('watch', function () {
     gulp.watch(TEMPLATES_PATH, ['templates']);
 });
 
+gulp.task('export', function () {
+   return gulp.src(['public/build/**/*', 'public/*.html'])
+       .pipe(zip('website.zip'))
+       .pipe(gulp.dest('./'));
+});
+
 // runs all gulp tasks
 gulp.task('default', function () {
-    gulp.start('styles', 'scripts');
+    gulp.start('styles', 'scripts', 'templates');
 });

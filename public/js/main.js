@@ -11,7 +11,7 @@ class Person {
     }
 }
 
-let person = new Person('NeoLiuKai');
+let person = new Person('Neo');
 // var name = 'Jen Smith';
 
 var greetHTML = templates['greeting']({
