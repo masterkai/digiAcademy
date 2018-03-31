@@ -49,7 +49,7 @@ gulp.task('styles', function () {
             require: ['susy']                   // 額外套件 susy
         })).on('error', handleErrors)
             .pipe(prefix('last 2 versions'))
-            .pipe(minifyCSS())
+            // .pipe(minifyCSS())
             .pipe(gulp.dest('public/build/css/'));
 });
 // reloads styles
@@ -86,7 +86,7 @@ gulp.task('scripts', function () {
         // .on('error', function () {
         //     this.emit('end');
         // })
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(concat('scripts.min.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/build/js/'));

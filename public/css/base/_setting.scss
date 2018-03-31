@@ -1,0 +1,29 @@
+$color_deep-gray: #707070;
+$color_tab-hover: #0075a9;
+$color_topCourseTab-hover: #ec6941;
+$color_readMoreBtn: #68afdc;
+$color_footerNav: #2f3e53;
+$color_logo_red: #e13221;
+$color_login: #f39800;
+
+
+
+/* breakpoints setting */
+$ipad: max-width 768px;
+
+/* animation for moving mainContents */
+.ani {
+  transition: all 0.5s !important;
+}
+
+.stopani, stopani * {
+  transition: none !important;
+}
+
+.mainContents {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

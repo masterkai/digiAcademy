@@ -1,0 +1,97 @@
+.latestNews {
+  padding: 0 5%;
+  margin-bottom: 30px;
+  .latestNews__track {
+    //display: flex;
+    .slick-prev {
+      position: absolute;
+      left: 0px;
+      height: 60px;
+      width: 40px;
+      transform: translateY(0%);
+      z-index: 100;
+      &:before {
+        display: block;
+        color: $color_deep-gray;
+        font-size: 40px;
+        content: '\f104';
+        font-family: fontawesome;
+        padding: 10px;
+        background-color: white;
+      }
+    }
+    .slick-next {
+      position: absolute;
+      right: 0px;
+      height: 60px;
+      width: 40px;
+      transform: translateY(0%);
+      z-index: 100;
+      &:before {
+        display: block;
+        color: $color_deep-gray;
+        font-size: 40px;
+        content: '\f105';
+        font-family: fontawesome;
+        padding: 10px;
+        background-color: white;
+      }
+    }
+
+    .latestNews__box {
+      flex-basis: 50%;
+      margin-left: 10px;
+      margin-right: 10px;
+      display: flex;
+      border: solid 1px $color_deep-gray;
+      flex-direction: column;
+      .latestNews__date {
+        width: 100%;
+        color: #fff;
+        background-color: $color_deep-gray;
+        padding: 10px;
+        text-align: center;
+      }
+      .latestNews__content {
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .latestNews__newCourseLenth {
+          font-size: 1.25rem;
+          letter-spacing: 1.2;
+          margin-bottom: 20px;
+        }
+        .latestNews__courseSubject {
+          margin-bottom: 40px;
+          .latestNews__courseLenth {
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            color: #fff;
+            background-color: #448aca;
+            padding: 8px 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+          }
+          ul {
+            list-style-type: circle;
+            margin-left: 28px;
+            line-height: 2;
+          }
+        }
+        .latestNews__readMoreBtn {
+          background-color: $color_readMoreBtn;
+          color: #fff;
+          padding: 12px 48px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: darken($color_readMoreBtn, 15%);
+          }
+        }
+      }
+    }
+  }
+}

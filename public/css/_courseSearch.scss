@@ -1,0 +1,90 @@
+$ipadProWidth: max-width 1366px;
+
+.courseSearch {
+  position: relative;
+  z-index: 1;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: center;
+  //border: 1px solid red;
+  ul {
+    @include breakpoint($ipadProWidth){
+      display: flex;
+      justify-content: space-evenly;
+      align-items: stretch;
+      flex-direction: column;
+    }
+    li {
+      display: inline-block;
+      @include breakpoint($ipadProWidth){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        //margin-bottom: 10px;
+      }
+      &:nth-child(2){
+        margin: 0 10px;
+        @include breakpoint($ipadProWidth){
+          display: none;
+        }
+      }
+      &:nth-child(1){
+        @include breakpoint($ipadProWidth){
+          display: none;
+        }
+      }
+      &:nth-child(3){
+        img {
+          float: right;
+          padding: 10px 15px;
+          border-radius: 2px;
+          width: 44px;
+          height: auto;
+          background-color: #ff0005;
+          cursor: pointer;
+          &:hover {
+            background-color: darken(#ff0005, 15%);
+          }
+        }
+      }
+      select, input {
+        padding: 5px;
+        margin-right: 10px;
+        @include breakpoint($ipadProWidth){
+          margin-bottom: 0px;
+        }
+      }
+      .courseSearch__btn {
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        background-color: #ff0005;
+        padding: 10px 15px;
+        border-radius: 2px;
+        font-size: .875rem;
+        transform: translateY(-2px);
+        @include breakpoint($ipadProWidth){
+          align-self: stretch;
+          //margin-bottom: 10px;
+        }
+        &:hover {
+          background-color: darken(#ff0005, 15%);
+        }
+      }
+    }
+  }
+}
+
+body.fixed-nav {
+  .courseSearch {
+    width: 100%;
+    background-color: rgba(white, .85);
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1029;
+  }
+}

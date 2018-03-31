@@ -1,2 +1,2 @@
-var age = 1000;
+var age = 1;
 console.log('age: '+age);

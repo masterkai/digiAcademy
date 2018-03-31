@@ -2,19 +2,28 @@
 <html lang="en" style='font-family: "Microsoft YaHei","Noto Sans TC", sans-serif;'>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
     <title>ES6</title>
 
     <!--=========================== CSS ===========================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
     <link rel="stylesheet" href="build/css/vendor.min.css">
     <link rel="stylesheet" href="build/css/styles.css">
 
     <!--=========================== JS ===========================-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <script type="text/javascript" src="build/js/data-watermark.js"></script>
+    <!--load everything-->
+    <script defer defer src="build/js/fontawesome-all.min.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -43,10 +52,2526 @@
 </head>
 <body>
 
-hello!!
+<nav class="navbar-default navbar-fixed-top">
+    <div class="navbar-brand">
+        <div class="openBtn"><i class="fal fa-bars"></i></div>
+        <img src="build/images/pcschool-tv-logo.svg" alt="">
+        <div class="searchToggleBtn"><i class="fal fa-search"></i></div>
+    </div>
+    <div class="navbar-nav">
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="menuToggle lv1Menu" href="#course">課程總攬&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">課程總覽</div>
+                    <li>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>APPLE學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>視覺設計學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>CAD設計學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>3D動畫學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>程式資料庫學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>網路管理學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>Office學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>資訊素養學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>資訊技能學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>自製教材學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>自由軟體學院</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>綜合基礎學院</a>
+                    </li>
+                    <div class="category">最新上線</div>
+                    <div class="category">數位學院卡課程</div>
+                </ul>
+            </li>
+            <li>
+                <a class="menuToggle lv1Menu" href="#join">我的教室&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">上課教室</div>
+                    <div class="category">上課紀錄</div>
+                    <div class="category">我的權益明細</div>
+                </ul>
+            </li>
+            <li>
+                <a class="menuToggle lv1Menu" href="#team">線上開卡&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">輸入學習卡號</div>
+                    <div class="category">完成開卡</div>
+                </ul>
+            </li>
+            <li>
+                <a class="menuToggle lv1Menu" href="#video">線上購買&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">我要購買</div>
+                    <div class="category">學習卡簡介</div>
+                </ul>
+            </li>
+            <li>
+                <a class="menuToggle lv1Menu" href="#video">會員中心&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">我的權益明細</div>
+                    <div class="category">修改資料及密碼</div>
+                    <div class="category">課程服務品質調查</div>
+                    <div class="category">網站品質調查</div>
+                </ul>
+            </li>
+            <li>
+                <a class="menuToggle lv1Menu" href="#video">客服中心&nbsp;<i class="fas fa-caret-down"></i></a>
+                <ul class="nav-menu-2">
+                    <div class="category">常見問題</div>
+                    <li>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>購卡問題</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>開卡問題</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>課程問題</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>權益問題</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>課程轉換</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>系統問題</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>其它問題</a>
+                    </li>
+                    <div class="category">服務簡介</div>
+                    <li>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>服務簡介</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>學習特色</a>
+                        <a href=""><i class="fal fa-angle-double-right fa-xs"></i>課程特色</a>
+                    </li>
+                    <div class="category">意見反應</div>
+                </ul>
+            </li>
+            <li class="searchToggleBtn">
+                <a href="#"><i class="fal fa-search"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-login"><a href="#"><i class="fas fa-user"></i>&nbsp;登入/註冊</a></div>
+</nav>
 
+<div class="clearfix "></div>
+
+<div class="mobile-nav-menu subMenu ani">
+
+    <button class="navbutton linker" data-navurl="login.aspx?ReturnUrl=%2fsoeasyedu%2fDefault.aspx" data-target="_self" type="button"><i class="fas fa-user"></i>&nbsp;登入 / 註冊</button>
+
+    <div class="clearfix"></div>
+    <ul class="mobile-nav-menu-ul">
+        <!--li click   addClass active  -->
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-book"></i>課程總覽</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2">課程總覽</li>
+            <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                <li class="mobile-nav-menu-li-link"><a href="#">APPLE學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">視覺設計學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">CAD設計學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">3D動畫學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">程式資料庫學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">網路管理學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">Office學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">資訊素養學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">資訊技能學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">自製教材學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">自由軟體學院</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">綜合基礎學院</a></li>
+            </ul>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">最新上線</a></li>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">數位學院卡課程</a></li>
+        </ul>
+
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-compass"></i>我的教室</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">上課教室</a></li>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">上課紀錄</a></li>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">我的權益明細</a></li>
+        </ul>
+
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-credit-card"></i>線上開卡</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">輸入學習卡號</a></li>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">完成開卡</a></li>
+        </ul>
+
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-shopping-cart"></i>線上購買</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">我要購買</a></li>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">學習卡簡介</a></li>
+        </ul>
+
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-address-card"></i>會員中心</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2-link"><a href="#">我的權益明細</a></li>
+            <li class="mobile-nav-menu-li-title-2-link"><a href="#">修改資料及密碼</a></li>
+            <li class="mobile-nav-menu-li-title-2-link"><a href="#">網站品質調查</a></li>
+        </ul>
+
+        <li class="mobile-nav-menu-li-title-1"><i class="fal fa-headphones"></i>客服中心</li>
+        <ul class="mobile-nav-menu-ul-2 animated fadeIn">
+            <li class="mobile-nav-menu-li-title-2">常見問題</li>
+            <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                <li class="mobile-nav-menu-li-link"><a href="#">購卡問題</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">開卡問題</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">課程問題</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">權益問題</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">課程轉換</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">系統問題</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">其它問題</a></li>
+            </ul>
+            <li class="mobile-nav-menu-li-title-2">服務簡介</li>
+            <ul class="mobile-nav-menu-ul-3 animated fadeIn">
+                <li class="mobile-nav-menu-li-link"><a href="#">服務簡介</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">學習特色</a></li>
+                <li class="mobile-nav-menu-li-link"><a href="#">課程特色</a></li>
+            </ul>
+            <li class="mobile-nav-menu-li-title-2-link contentNO"><a href="#">意見反應</a></li>
+        </ul>
+
+
+    <div class="clearfix"></div>
+</div>
+
+
+<div style="overflow-x: hidden">
+    <div class="mainContents ani">
+
+        <header>
+            <div id="bannerCarousel">
+                <div class="banner">
+                    <img class="img-responsive visible-lg visible-md visible-sm" src="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/gjun_game_1920x500.jpg" alt="">
+                    <img class="img-responsive visible-xs" src="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/gjun_game_768x500.jpg" alt="">
+                </div>
+                <div class="banner">
+                    <img class="img-responsive visible-lg visible-md visible-sm" src="" alt="" data-bimg="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/gjun_illustration_1920x500.jpg">
+                    <img class="img-responsive visible-xs" src="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/gjun_illustration_768x500.jpg" alt="">
+                </div>
+                <div class="banner">
+                    <img class="img-responsive visible-lg visible-md visible-sm" src="" alt="" data-bimg="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/1920x500-2.jpg">
+                    <img class="img-responsive visible-xs" src="https://www.pcschool.com.tw/activity/digiAcademy/images/banner/Python_768x500.jpg" alt="">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+
+        <section class="courseSearch" id="courseSearchBar">
+            <ul>
+                <li>查詢課程：
+                    <select name="" id="">
+                        <option selected="selected" value="1">依學院查詢</option>
+                        <option value="3">依老師查詢</option>
+                    </select>
+                    <select name="" id="">
+                        <option selected="selected" value="">請選擇學院</option>
+                        <option value="U">Apple設計學院</option>
+                        <option value="R">資訊素養學院</option>
+                        <option value="G">視覺設計學院</option>
+                        <option value="H">CAD設計學院</option>
+                        <option value="J">程式資料庫學院</option>
+                        <option value="I">3D動畫學院</option>
+                        <option value="M">Office學院</option>
+                        <option value="K">網路管理學院</option>
+                        <option value="N">資訊技能學院</option>
+                        <option value="O">自由軟體學院</option>
+                        <option value="P">快速自製教材學院</option>
+                        <option value="S">綜合基礎學院</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">請選擇系列</option>
+                    </select>
+                    <div class="courseSearch__btn">查詢</div>
+                </li>
+                <li>|</li>
+                <li>
+                    <input name="ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$search1$txt_keyword" type="text" value="課程關鍵字搜尋" id="ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_search1_txt_keyword" class="input-font_12" onfocus="if(this.value=='課程代碼,關鍵字搜尋') {this.value=''} " onblur="if(this.value=='') {this.value='課程代碼,關鍵字搜尋'} "/>
+                    <img src="https://www.pcschool.com.tw/activity/digiAcademy/images/search.svg" alt="" class="img-responsive" id="courseSearch">
+                </li>
+            </ul>
+        </section>
+
+        <section class="theMostCompleteOnlineCourse" id="onlineCourses">
+            <h1 class="sectionTitle">最齊全的線上電腦課程</h1>
+            <div class="section-header">
+                <ul class="tabs-nav">
+                    <li><a href="#Apple_Design">Apple設計</a></li>
+                    <li><a href="#visual_design">視覺設計</a></li>
+                    <li><a href="#3D_animation">3D動畫</a></li>
+                    <li><a href="#CAD_design">CAD設計</a></li>
+                    <li><a href="#Program_database">程式資料庫</a></li>
+                    <li><a href="#Network_Management">網路管理</a></li>
+                    <li><a href="#Office">Office</a></li>
+                    <li><a href="#Information_Literacy">資訊素養</a></li>
+                    <li><a href="#Information_skills">資訊技能</a></li>
+                    <li><a href="#Self-made_textbooks">自製教材</a></li>
+                    <li><a href="#Own_software">自有軟體</a></li>
+                    <li><a href="#Comprehensive_basis">綜合基礎</a></li>
+                </ul>
+            </div>
+            <div class="section-body">
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0160b4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>1UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0160b4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>2UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0160b4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>3UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0160b4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>4UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0160b4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>4UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #029ec3">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #029ec3">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #029ec3">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #029ec3">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #029ec3">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0fab01">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>2UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0fab01">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0fab01">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0fab01">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0fab01">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #88c500">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>3UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #88c500">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #88c500">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #88c500">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #88c500">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffff01;color: black;">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01_bk.svg" alt="" class="img-responsive">
+                                    <p>4UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffff01;color: black;">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01_bk.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffff01;color: black;">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01_bk.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffff01;color: black;">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01_bk.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffff01; color: black;">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01_bk.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffc502">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffc502">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffc502">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffc502">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ffc502">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff9300">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff9300">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff9300">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff9300">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff9300">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff6401">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff6401">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff6401">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff6401">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #ff6401">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #fe0002">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #fe0002">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #fe0002">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #fe0002">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #fe0002">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #c3007b">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #c3007b">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #c3007b">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #c3007b">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #c3007b">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel" >
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #9b26af">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #9b26af">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #9b26af">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #9b26af">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #9b26af">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="tabs-panel" >
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0111a4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class02.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0111a4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class03.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0111a4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class04.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0111a4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-img">
+                                <img class="img-responsive" src="build/images/online01class01.jpg" alt="生活會話Level1">
+                                <p>
+                                    <span class="orange-linear ">上課去</span>
+                                </p>
+                            </div>
+                            <div class="card-content" style="background-color: #0111a4">
+                                <div class="card-content-A">
+                                    <img src="build/images/icon01class01.svg" alt="" class="img-responsive">
+                                    <p>UI視覺設計</p>
+                                </div>
+                                <div class="card-content-B ">
+                                    <p>著重基本日常生活的語言技能培養，讓您應用必備英文字彙與句型，學會生活與職場會話基本能力。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="topCourse" id="topCourses">
+            <h1 class="sectionTitle">強打課程</h1>
+            <div class="topCourse__header">
+                <ul class="topCourse__tabsNav">
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_visualDesign.svg" alt="">
+                            <div class="title">視覺設計</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_industrialDesign.svg" alt="">
+                            <div class="title">工業設計</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_3dAnimation.svg" alt="">
+                            <div class="title">3D動畫</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_mobileApp.svg" alt="">
+                            <div class="title">手機APP</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_dataBase.svg" alt="">
+                            <div class="title">程式資料庫</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_networkManagement.svg" alt="">
+                            <div class="title">網路管理</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_office.svg" alt="">
+                            <div class="title">Office</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="d-flex">
+                            <img src="build/images/icon_infoTech.svg" alt="">
+                            <div class="title">資訊技能</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="topCourse__body">
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+                <div class="topCourse__panel">
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc01.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass01.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">Windows Server 2016基礎系列建置之二：系統管理進階實務</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>本機使用者與群組帳戶管理</li>
+                                    <li>淺談本機NTFS檔案權限安全性管理</li>
+                                    <li>管理使用者設定檔之工作環境</li>
+                                    <li>磁碟管理</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：194分</div>
+                                <div class="topCourse__instructor">講師：蘇智成老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc02.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass02.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20414_進階建置Windows Server 2012伺服器架構之一：規劃與建置伺服器虛擬化環境環境</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>認識企業資料中心</li>
+                                    <li>了解Microsoft System Center 2012 R2元件</li>
+                                    <li>VMM建置規劃</li>
+                                    <li>規劃與建置虛擬伺服器主機環境</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：74分</div>
+                                <div class="topCourse__instructor">講師：薛閔介老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc03.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass03.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20411 Module 1：Deploying and Maintaining Server Images</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>Windows Deployment Services部署服務概述</li>
+                                    <li>使用Windows Deployment Services建置部署</li>
+                                    <li>如何管理Windows Deployment Services部署服務</li>
+                                    <li>使用Windows Deployment Services來部署Windows Server 2012</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：195分</div>
+                                <div class="topCourse__instructor">講師：黃河凱老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                    <div class="topCourse__box">
+                        <div class="topCourse__teacher" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/instructor/tc04.jpg)"></div>
+                        <div class="topCourse__top">
+                            <div class="topCourse__coursePic" style="background-image: url(https://www.pcschool.com.tw/activity/digiAcademy/images/bgImg/tcclass04.jpg)"></div>
+                        </div>
+                        <div class="topCourse__bottom">
+                            <div class="topCourse__classtitle">20412 Module 1：Implementing Advanced Network Services</div>
+                            <div class="topCourse__classBrief">
+                                <ul>
+                                    <li>DHCP服務的進階功能設定</li>
+                                    <li>DNS服務的進階功能設定</li>
+                                    <li>IP位址管理的建置</li>
+                                    <li>進階網路服務功能的建置</li>
+                                </ul>
+                            </div>
+                            <div class="topCourse__db">
+                                <div class="topCourse__length">課程長度：116分</div>
+                                <div class="topCourse__instructor">講師：李雋元老師</div>
+                            </div>
+                        </div>
+                        <div class="topCourse__gotoCourseBtn">上課去</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latestNews">
+            <h1 class="sectionTitle">最新消息</h1>
+            <div class="latestNews__track">
+                <div class="latestNews__box">
+                    <div class="latestNews__date">2017/12/14</div>
+                    <div class="latestNews__content">
+                        <div class="latestNews__newCourseLenth">【上線通告】106年12月最新上線課程共5科</div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">3ds Max空間設計系列 共計3科</div>
+                            <ul>
+                                <li>3ds Max室內建築環景設計之十四：利用渲染參數加強圖面擬真感(上)</li>
+                                <li>3ds Max室內建築環景設計之十五：利用渲染參數加強圖面擬真感(中)</li>
+                                <li>3ds Max室內建築環景設計之十六：利用渲染參數加強圖面擬真感(下)</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft網管認證系列 共計1科</div>
+                            <ul>
+                                <li>Windows Server 2016基礎系列建置之一：系統管理實務</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft資料庫認證系列 共計1科</div>
+                            <ul>
+                                <li>SQL Server資料庫概論之四：SQL Server資料庫管理系統</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__readMoreBtn">Read more</div>
+                    </div>
+                </div>
+                <div class="latestNews__box">
+                    <div class="latestNews__date">2017/12/14</div>
+                    <div class="latestNews__content">
+                        <div class="latestNews__newCourseLenth">【上線通告】106年12月最新上線課程共5科</div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">3ds Max空間設計系列 共計3科</div>
+                            <ul>
+                                <li>3ds Max室內建築環景設計之十四：利用渲染參數加強圖面擬真感(上)</li>
+                                <li>3ds Max室內建築環景設計之十五：利用渲染參數加強圖面擬真感(中)</li>
+                                <li>3ds Max室內建築環景設計之十六：利用渲染參數加強圖面擬真感(下)</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft網管認證系列 共計1科</div>
+                            <ul>
+                                <li>Windows Server 2016基礎系列建置之一：系統管理實務</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft資料庫認證系列 共計1科</div>
+                            <ul>
+                                <li>SQL Server資料庫概論之四：SQL Server資料庫管理系統</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__readMoreBtn">Read more</div>
+                    </div>
+                </div>
+                <div class="latestNews__box">
+                    <div class="latestNews__date">2017/12/14</div>
+                    <div class="latestNews__content">
+                        <div class="latestNews__newCourseLenth">【上線通告】106年12月最新上線課程共5科</div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">3ds Max空間設計系列 共計3科</div>
+                            <ul>
+                                <li>3ds Max室內建築環景設計之十四：利用渲染參數加強圖面擬真感(上)</li>
+                                <li>3ds Max室內建築環景設計之十五：利用渲染參數加強圖面擬真感(中)</li>
+                                <li>3ds Max室內建築環景設計之十六：利用渲染參數加強圖面擬真感(下)</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft網管認證系列 共計1科</div>
+                            <ul>
+                                <li>Windows Server 2016基礎系列建置之一：系統管理實務</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft資料庫認證系列 共計1科</div>
+                            <ul>
+                                <li>SQL Server資料庫概論之四：SQL Server資料庫管理系統</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__readMoreBtn">Read more</div>
+                    </div>
+                </div>
+                <div class="latestNews__box">
+                    <div class="latestNews__date">2017/12/14</div>
+                    <div class="latestNews__content">
+                        <div class="latestNews__newCourseLenth">【上線通告】106年12月最新上線課程共5科</div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">3ds Max空間設計系列 共計3科</div>
+                            <ul>
+                                <li>3ds Max室內建築環景設計之十四：利用渲染參數加強圖面擬真感(上)</li>
+                                <li>3ds Max室內建築環景設計之十五：利用渲染參數加強圖面擬真感(中)</li>
+                                <li>3ds Max室內建築環景設計之十六：利用渲染參數加強圖面擬真感(下)</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft網管認證系列 共計1科</div>
+                            <ul>
+                                <li>Windows Server 2016基礎系列建置之一：系統管理實務</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__courseSubject">
+                            <div class="latestNews__courseLenth">Microsoft資料庫認證系列 共計1科</div>
+                            <ul>
+                                <li>SQL Server資料庫概論之四：SQL Server資料庫管理系統</li>
+                            </ul>
+                        </div>
+                        <div class="latestNews__readMoreBtn">Read more</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footerNav">
+            <div class="footerNav__wrapper">
+                <ul>
+                    <li><a href="#">巨匠電腦</a></li>
+                    <li>|</li>
+                    <li><a href="#">巨匠美語</a></li>
+                    <li>|</li>
+                    <li><a href="#">巨匠線上真人</a></li>
+                    <li>|</li>
+                    <li><a href="#">美語數位學院</a></li>
+                    <li>|</li>
+                    <li><a href="#">日語數位學院</a></li>
+                    <li>|</li>
+                    <li><a href="#">隱私權政策</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer__wrapper">
+                <img src="https://www.pcschool.com.tw/activity/digiAcademy/images/pcschool-tv-logo_white.svg" alt="" class="img-responsive">
+                <div class="footer__divider"></div>
+                <ul class="footer__info">
+                    <li>巨匠電腦股份有限公司　版權所有 Copyright 2018 Gjun Information Co., Ltd</li>
+                    <li>客服專線：0800-231381（週一至週五9:00-12:00, 13:00-18:00）</li>
+                    <li>客服信箱：ecbook@pcschool.com.tw</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</div>
 
 <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 <script type="application/javascript" src="build/js/templates.js"></script>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>

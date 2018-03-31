@@ -1,0 +1,24 @@
+header {
+  margin-top: 50px;
+  #bannerCarousel{
+    margin-bottom: 10px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    .banner {
+      float: left;
+    }
+    .slick-dots{
+      bottom: 10px;
+      li {
+        button{
+          &:before {
+            font-size: 1rem;
+            color: #dddddd;
+          }
+        }
+      }
+    }
+  }
+}

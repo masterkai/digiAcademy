@@ -1,0 +1,19 @@
+.footerNav {
+  padding: 25px 5%;
+  .footerNav__wrapper {
+    display: flex;
+    justify-content: center;
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-bottom: 5px;
+
+        a {
+          color: $color_footerNav;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

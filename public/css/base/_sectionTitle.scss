@@ -1,0 +1,10 @@
+.sectionTitle {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 1.625rem;
+  letter-spacing: 2px;
+  @include breakpoint($ipad){
+    margin: 20px auto;
+    font-size: 1.2rem;
+  }
+}
