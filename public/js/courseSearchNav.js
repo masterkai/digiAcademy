@@ -1,9 +1,13 @@
+var nav = $('nav');
+var searchNav = $('#courseSearchBar');
+var navHeight;
+var searchNavHeight;
+var topOfSearchNav;
+
 $(function () {
-    var nav = $('nav');
-    var searchNav = $('#courseSearchBar');
-    var navHeight;
-    var searchNavHeight;
-    var topOfSearchNav;
+    navHeight = nav.innerHeight();
+    searchNavHeight = searchNav.innerHeight();
+    topOfSearchNav = searchNav.offset().top;
 
     resizeDiv();
     window.onresize = function(event) {
@@ -24,9 +28,8 @@ $(function () {
         if($(window).scrollTop() >= (topOfSearchNav-searchNavHeight)) {
             // console.log('test!!'+topOfSearchNav);
             document.body.style.paddingTop = searchNavHeight + 'px';
-            // document.body.classList.add('fixed-nav');
+            document.body.classList.add('fixed-nav');
             searchNav.css({
-                'display': 'none',
                 // 'margin-top':navHeight+'px'
                 // 'width': '100%',
                 // 'background-color': 'rgba(255,255,255, .85)',
@@ -38,11 +41,10 @@ $(function () {
                 // 'z-index': '1029',
             });
         }else {
-            // document.body.classList.remove('fixed-nav');
+            document.body.classList.remove('fixed-nav');
             document.body.style.paddingTop = 0;
             searchNav.css({
-                'display': 'flex',
-                // 'margin-top':0 +'px'
+                'margin-top':0 +'px'
                 // 'position': 'relative',
                 // 'box-shadow': 'none',
             });

@@ -1,5 +1,13 @@
 header {
   margin-top: 50px;
+  &.header__img {
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    &--opinions {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_opinionsBg.jpg) no-repeat 50% 50%;
+    }
+  }
   #bannerCarousel{
     margin-bottom: 10px;
     height: auto;

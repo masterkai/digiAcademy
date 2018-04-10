@@ -1,0 +1,33 @@
+.categoryTitle {
+  padding: 18px 5%;
+  font-size: 1.5rem;
+  letter-spacing: 1.325px;
+  display: flex;
+  flex-direction: row;
+  @include breakpoint($ipad){
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  h1{
+    flex: 1 1 35%;
+    padding-bottom: 8px;
+    border-bottom: 4px solid $color_deep-gray;
+    max-width: 372px;
+    @include breakpoint($ipad){
+      flex: 1 1 65%;
+    }
+    span {
+      color: $color_category_eng;
+      margin-left: 10px;
+
+    }
+  }
+  &__bar {
+    flex: 1 1 65%;
+    border-bottom: 4px solid $color_category_eng;
+    @include breakpoint($ipad){
+      flex: 1 1 35%;
+    }
+  }
+}

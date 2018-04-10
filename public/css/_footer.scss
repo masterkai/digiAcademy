@@ -4,6 +4,9 @@ footer {
   padding: 2.5% 5%;
   display: flex;
   justify-content: center;
+  @include breakpoint($ipad){
+    padding: 5.5% 5% 12.5%;
+  }
   .footer__wrapper {
     flex-basis: 100%;
     display: flex;
