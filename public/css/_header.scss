@@ -4,8 +4,12 @@ header {
     background-size: cover;
     height: 200px;
     width: 100%;
+    margin-bottom: 10px;
     &--opinions {
       background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_opinionsBg.jpg) no-repeat 50% 50%;
+    }
+    &--faq {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_faqBg.jpg) no-repeat 50% 50%;
     }
   }
   #bannerCarousel{

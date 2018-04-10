@@ -1,0 +1,82 @@
+.faq {
+  padding: 38px 5%;
+  display: flex;
+  justify-content: center;
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__card {
+    margin: 0 auto 30px;
+    max-width:1060px;
+    border: 2px solid darken($color_tipsBg,10%);
+    padding-bottom: 44px;
+    .faq__subject {
+      display: block;
+      max-width: 354px;
+      color: #fff;
+      font-weight: 400;
+      background-color: $color_tipsBrLeft;
+      padding: 15px;
+      font-size: 1.25rem;
+      letter-spacing: 1.875px;
+      margin: 38px auto;
+      text-align: center;
+      svg {
+        margin-right: 5px;
+      }
+    }
+    .panel-group {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 60px;
+      @include breakpoint($ipad){
+        padding-left: 0;
+      }
+      .panel {
+        margin-bottom: 40px;
+        .faq__heading {
+          padding: 0 0 10px 70px;
+          color: $color_tipsBrLeft;
+          font-size: 1.2rem;
+          line-height: 2em;
+          text-indent: -4.25rem;
+          .faq__title {
+            a {
+              text-decoration: none;
+              span {
+                padding: 10px;
+                border: 2px solid darken($color_tipsBrLeft, 5%);
+                border-radius: 50px;
+                font-weight: 600;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+        .panel-collapse {
+          .panel-body {
+            ol {
+              line-height: 2rem;
+              padding-left: 60px;
+              position: relative;
+              &:before {
+                content: '';
+                position: absolute;
+                border-left: 5px solid $color_tipsBrLeft;
+                height: 80%;
+                width: 5px;
+                top: 0;
+                left: 40px;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

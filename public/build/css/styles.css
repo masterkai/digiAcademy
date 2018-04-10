@@ -437,9 +437,12 @@ header {
   header.header__img {
     background-size: cover;
     height: 200px;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 10px; }
     header.header__img--opinions {
       background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_opinionsBg.jpg) no-repeat 50% 50%; }
+    header.header__img--faq {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_faqBg.jpg) no-repeat 50% 50%; }
   header #bannerCarousel {
     margin-bottom: 10px;
     height: auto;
@@ -1363,3 +1366,85 @@ body.fixed-nav .courseSearch {
     letter-spacing: 1.2px; }
     #freetry .btnFree span {
       color: #fff100; }
+
+.faq {
+  padding: 38px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .faq .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .faq__card {
+    margin: 0 auto 30px;
+    max-width: 1060px;
+    border: 2px solid #d5d5d5;
+    padding-bottom: 44px; }
+    .faq__card .faq__subject {
+      display: block;
+      max-width: 354px;
+      color: #fff;
+      font-weight: 400;
+      background-color: #0075a9;
+      padding: 15px;
+      font-size: 1.25rem;
+      letter-spacing: 1.875px;
+      margin: 38px auto;
+      text-align: center; }
+      .faq__card .faq__subject svg {
+        margin-right: 5px; }
+    .faq__card .panel-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding-left: 60px; }
+      @media (max-width: 768px) {
+        .faq__card .panel-group {
+          padding-left: 0; } }
+      .faq__card .panel-group .panel {
+        margin-bottom: 40px; }
+        .faq__card .panel-group .panel .faq__heading {
+          padding: 0 0 10px 70px;
+          color: #0075a9;
+          font-size: 1.2rem;
+          line-height: 2em;
+          text-indent: -4.25rem; }
+          .faq__card .panel-group .panel .faq__heading .faq__title a {
+            text-decoration: none; }
+            .faq__card .panel-group .panel .faq__heading .faq__title a span {
+              padding: 10px;
+              border: 2px solid #006390;
+              border-radius: 50px;
+              font-weight: 600;
+              margin-right: 10px; }
+        .faq__card .panel-group .panel .panel-collapse .panel-body ol {
+          line-height: 2rem;
+          padding-left: 60px;
+          position: relative; }
+          .faq__card .panel-group .panel .panel-collapse .panel-body ol:before {
+            content: '';
+            position: absolute;
+            border-left: 5px solid #0075a9;
+            height: 80%;
+            width: 5px;
+            top: 0;
+            left: 40px;
+            margin-top: 8px; }
