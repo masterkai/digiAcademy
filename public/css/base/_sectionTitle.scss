@@ -3,8 +3,21 @@
   margin: 50px auto;
   font-size: 1.625rem;
   letter-spacing: 2px;
+  line-height: 1.5;
   @include breakpoint($ipad){
     margin: 20px auto;
     font-size: 1.2rem;
+  }
+
+  &--red {
+    color: $color_button;
+    margin-bottom: 15px;
+    @include breakpoint($ipad){
+      margin: 20px auto 15px;
+      font-size: 1.2rem;
+    }
+  }
+  span {
+    font-weight: 600;
   }
 }

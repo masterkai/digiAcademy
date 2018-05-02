@@ -1,0 +1,15 @@
+.logo {
+  margin-top: 15px;
+  padding-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  @include breakpoint($ipad){
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  img {
+    height: 30px;
+  }
+}

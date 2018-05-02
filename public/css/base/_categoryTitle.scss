@@ -8,26 +8,49 @@
     font-size: 1.25rem;
     letter-spacing: 1px;
   }
+  @include breakpoint(max-width 550px){
+    font-size: 1.1rem;
+  }
+  @include breakpoint(max-width 450px){
+    font-size: .9rem;
+    letter-spacing: .5px;
+  }
 
   h1{
-    flex: 1 1 35%;
+    flex: 1 1 auto;
     padding-bottom: 8px;
     border-bottom: 4px solid $color_deep-gray;
-    max-width: 372px;
+    max-width: 100%;
+    line-height: 1.45;
     @include breakpoint($ipad){
-      flex: 1 1 65%;
+      flex: 1 1 67%;
+    }
+    @include breakpoint(max-width 550px){
+      flex: 1 1 75%;
+      line-height: 1.375;
     }
     span {
       color: $color_category_eng;
       margin-left: 10px;
-
+    }
+    span.class {
+      color: $color_class;
+    }
+    span.courseName {
+      color: $color_courseName;
+      @include breakpoint($ipad){
+        margin-left: 0;
+      }
     }
   }
   &__bar {
-    flex: 1 1 65%;
+    flex: 1 1 auto;
     border-bottom: 4px solid $color_category_eng;
     @include breakpoint($ipad){
-      flex: 1 1 35%;
+      flex: 1 1 33%;
+    }
+    @include breakpoint(max-width 550px){
+      flex: 1 1 25%;
     }
   }
 }

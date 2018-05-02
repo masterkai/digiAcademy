@@ -225,11 +225,11 @@
 </div>
 
 
-<header class="header__img header__img--opinions">
+<header class="header__img header__img--inqPwd">
     <div class="clearfix"></div>
 </header>
 
-<section class="courseSearch" id="courseSearchBar">
+<section class="courseSearch" id="courseSearchBar" style="display: none">
     <ul>
         <li>查詢課程：
             <select name="" id="">
@@ -264,48 +264,22 @@
     </ul>
 </section>
 
-<section class="categoryTitle">
-    <h1 class="categoryTitle__heading">意見反應<span>Opinions</span></h1>
-    <div class="categoryTitle__bar"></div>
-    <div class="clearfix"></div>
-</section>
-
-<section class="tips">
-    <div class="tips__field">
-        <p>若您於上班以外的時間發生問題，請多利用本單元，將您的問題或寶貴意見反應給我們，我們將於上班時間（週一至週五9:00-12:00, 13:00-18:00）盡快回覆給您。</p>
-    </div>
-</section>
-
-<section class="form">
+<section class="form__login">
     <div class="container">
         <div class="row">
-            <div class="form__box">
-                <select name="" id="">
-                    <option value="" selected="selected">選擇問題類型</option>
-                </select>
-                <input type="text" value="中文姓名">
-                <input type="text" value="行動電話">
-                <input type="text" value="電子郵件">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                    <span>附加檔案：</span><input type="file">
+            <div action="" class="login">
+                <h1 class="form__title">忘記密碼</h1>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="請輸入帳號">
+                    <input type="text" class="form-control" placeholder="請輸入下方驗證碼">
                 </div>
-                <div class="fileUploadTips">
-                    （*限JPG、GIF、WORD檔案，檔案限200kb以內，可怖上傳)
+                <div class="form__validatingImg">
+                    <img src="build/images/validatingCode.jpg" alt="" class="img-responsiv">
+                    <i class="fal fa-repeat"></i>
                 </div>
-                <div class="options">
-
-                    <ul>附加檔案：
-                        <li><input type="radio">請直接回覆本訊息，我將自行到本網站「客服中心」的
-                            「我的客服紀錄」觀看</li>
-                        <li><input type="radio">請E-mail回覆到我E-mail信箱：XXXXX@XXXXX.com.tw</li>
-                        <li><input type="radio">請客服人員以電話方式跟我聯絡</li>
-                    </ul>
-
-                </div>
-                <lable><input type="checkbox">我已詳細閱讀並接受<a onclick="window.open('http://www.pcschool.com.tw/member/Message.html','person',config='height=640,width=830');return false;" href="#" style="color:#002cea;">個資保護聲明</a></lable>
-                <div class="btn btn-lightBlue">確定送出</div>
+                <div class="btn">繼續</div>
             </div>
+
         </div>
     </div>
 </section>

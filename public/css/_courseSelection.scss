@@ -1,0 +1,17 @@
+.courseSelection {
+  padding: 0 5%;
+  &__box {
+    background-color: $color_tableHeadingBg;
+    padding: 25px 30px;
+    @include breakpoint($ipad){
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    select {
+      padding: 8px 20px;
+    }
+  }
+}

@@ -11,6 +11,30 @@ header {
     &--faq {
       background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_faqBg.jpg) no-repeat 50% 50%;
     }
+    &--courseOverView {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_OverViewBg.jpg) no-repeat 50% 50%;
+    }
+    &--newCourse {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_newcourseBg.jpg) no-repeat 50% 50%;
+    }
+    &--collegeCard {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_collegecard.jpg) no-repeat 50% 50%;
+    }
+    &--allClass {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/img_allclassBg.jpg) no-repeat 50% 50%;
+    }
+    &--login {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/login.svg) no-repeat 50% 100%;
+      background-size: auto;
+    }
+    &--inqPwd {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/inqPwd.svg) no-repeat 50% 100%;
+      background-size: auto;
+    }
+    &--signup {
+      background: url(https://www.pcschool.com.tw/activity/digiAcademy/images/signup.svg) no-repeat 50% 100%;
+      background-size: auto;
+    }
   }
   #bannerCarousel{
     margin-bottom: 10px;

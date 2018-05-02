@@ -1,0 +1,93 @@
+$columx2:600px 1200px;
+.courseOverView {
+  padding: 30px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .courseOverView__card {
+      position: relative;
+      border-radius: 5px;
+      flex: 1 1 23%;
+      display: flex;
+      flex-direction: column;
+      margin: 15px 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      @include breakpoint($columx2){
+        flex: 1 1 45%;
+        margin: 10px 5px;
+      }
+      @include breakpoint($ipad){
+        flex: 1 1 100%;
+      }
+      &__btn {
+        position: absolute;
+        bottom: 0;
+        max-width: 200px;
+        margin: 30px auto 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 30px;
+        color: #fff;
+        background-color: $color_topCourseTab-hover;
+        border-radius: 3px;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      &__title {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_tipsBrLeft;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+
+        span {
+          font-weight: 600;
+          font-size: 1.375rem;
+          margin-right: 2px;
+        }
+        img {
+          max-width: 100%;
+          width: 30px;
+          margin-right: 8px;
+        }
+      }
+      &__content {
+        padding: 15px;
+        align-self: stretch;
+        margin-bottom: 55px;
+        &__list {
+          li {
+            position: relative;
+            padding-left: 18px;
+            line-height: 2;
+            &:before {
+              position: absolute;
+              font-family: 'fontawesome';
+              content: '\f0da';
+              left: 5px;
+              color: $color_topCourseTab-hover;
+            }
+            &:nth-child(even){
+              background-color: lighten($color_footerNav, 68%);
+            }
+            &:nth-child(odd){
+              background-color: lighten($color_footerNav, 75%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

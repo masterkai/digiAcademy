@@ -1,0 +1,82 @@
+.regulation {
+  padding: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  hr {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .btn {
+    background-color: $color_button;
+    color: #fff;
+    max-width: 300px;
+    width: 200px;
+    font-size: 1.25rem;
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    &:hover {
+      background-color: darken($color_button, 15%);
+    }
+  }
+
+  &__box {
+    display: flex;
+    background-color: $color_regulationBg;
+    max-width: 100%;
+    padding: 3.5% 5%;
+    flex-direction: column;
+    p {
+      line-height: 1.5;
+      font-size: 1.25rem;
+      text-align: left;
+      margin-bottom: 38px;
+      @include breakpoint($ipad){
+        font-size: 1rem;
+      }
+      &.item {
+        font-size: 1rem;
+        text-indent: -30px;
+        padding-left: 30px;
+        svg {
+          color: $color_button;
+          padding-right: 3px;
+        }
+      }
+    }
+    ul.item {
+      line-height: 1.875;
+      font-size: 1rem;
+      margin-bottom: 38px;
+      li {
+        text-indent: -30px;
+        padding-left: 30px;
+        &.noIndent{
+          text-indent: unset;
+          padding-left: unset;
+        }
+        svg {
+          color: $color_button;
+          padding-right: 3px;
+        }
+        span.orange {
+          svg {
+            color: $color_topCourseTab-hover;
+          }
+        }
+        &.ml5 {
+          margin-left: 20px;
+          text-indent: -95px;
+          padding-left: 95px;
+          &--less-indent {
+            text-indent: -15px;
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}

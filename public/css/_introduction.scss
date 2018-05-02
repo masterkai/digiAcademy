@@ -1,0 +1,85 @@
+.introduction {
+  &__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  &__item {
+    flex-basis: 100%;
+    max-width: 1060px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    @include breakpoint($ipad){
+      flex-direction: column;
+    }
+    &:nth-child(odd){
+      background-color: $color_introBgOdd;
+    }
+    &:nth-child(even){
+      background-color: $color_tipsBg;
+    }
+    &__title {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 20%;
+      text-align: center;
+      border-right: 1px dashed lighten($color_deep-gray,20%);
+      line-height: 1.5;
+      @include breakpoint($ipad){
+        font-weight: 600;
+        padding-bottom: 20px;
+        border-right: unset;
+        //border-bottom: 1px dashed lighten($color_deep-gray,20%);
+        flex-basis: auto;
+
+      }
+    }
+    &__content {
+      font-size: .9rem;
+      flex: 1 1 80%;
+      line-height: 1.45;
+      padding: 10px 35px;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      @include breakpoint($ipad){
+        flex-direction: column;
+        flex-basis: auto;
+        justify-content: flex-start;
+      }
+      span {
+        color: $color_warning;
+      }
+      img {
+        max-width: 199px;
+        max-height: 190px;
+        margin-right: 10px;
+        @include breakpoint($ipad){
+          border-radius: 200px;
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+        line-height: 1.35;
+        li {
+          ol {
+            list-style: decimal;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+
+  }
+}

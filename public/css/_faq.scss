@@ -10,6 +10,7 @@
   &__card {
     margin: 0 auto 30px;
     max-width:1060px;
+    width: 100%;
     border: 2px solid darken($color_tipsBg,10%);
     padding-bottom: 44px;
     .faq__subject {
@@ -37,6 +38,7 @@
       }
       .panel {
         margin-bottom: 40px;
+        box-shadow: none;
         .faq__heading {
           padding: 0 0 10px 70px;
           color: $color_tipsBrLeft;
@@ -58,22 +60,63 @@
         }
         .panel-collapse {
           .panel-body {
+
             ol {
               line-height: 2rem;
-              padding-left: 60px;
+              padding-left: 80px;
               position: relative;
+              list-style: decimal;
               &:before {
                 content: '';
                 position: absolute;
                 border-left: 5px solid $color_tipsBrLeft;
-                height: 80%;
+                height: 95%;
                 width: 5px;
                 top: 0;
                 left: 40px;
                 margin-top: 8px;
               }
+              li {
+                span.bolder {
+                  font-weight: 600;
+                }
+                span.red {
+                  color: $color_button;
+                }
+                a {
+                  
+                }
+              }
+            }
+            ul {
+              line-height: 2rem;
+              padding-left: 80px;
+              position: relative;
+              list-style: disc;
+              &:before {
+                content: '';
+                position: absolute;
+                border-left: 5px solid $color_tipsBrLeft;
+                height: 95%;
+                width: 5px;
+                top: 0;
+                left: 40px;
+                margin-top: 8px;
+              }
+              li {
+                span.red {
+                  color: $color_button;
+                }
+                span.bolder {
+                  font-weight: 600;
+                }
+                a {
+
+                }
+              }
             }
           }
+
         }
       }
     }

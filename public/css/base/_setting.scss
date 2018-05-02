@@ -1,4 +1,5 @@
 $color_deep-gray: #707070;
+$color_courseName: #1b1b1b;
 $color_tab-hover: #0075a9;
 $color_topCourseTab-hover: #ec6941;
 $color_readMoreBtn: #68afdc;
@@ -12,6 +13,12 @@ $color_lightBlueBtn: #00bbd3;
 $color_btnFree: #1983b1;
 $color_btnSpan: #fff100;
 $color_freetry: #3db1e6;
+$color_warning: #a40000;
+$color_button: #e60012;
+$color_class: #df2012;
+$color_regulationBg: #f7f7f7;
+$color_introBgOdd: #f8f8f8;
+$color_tableHeadingBg: #e5e5e5;
 
 
 
@@ -33,4 +40,7 @@ $ipad: max-width 768px;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+span.orange {
+  color: $color_topCourseTab-hover;
 }
